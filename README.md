@@ -1,6 +1,5 @@
 # KiwiScript
 
-<<<<<<< HEAD
 KiwiScript is a scripting language made for the web in the form of a backend language.
 
 # Documentation
@@ -26,6 +25,3 @@ you can use normal html along with KiwiScript so it is pretty easy to use
 What this tag does is sets the variable in this example it is named varName,
 and you can put it in a echo tag like `<echo>varName</echo>`
 and when you go to http://localhost:8888/ you will get "var stuffs" where those echo tags where
-=======
-A scripting language made in javascript.
->>>>>>> bf79d2f1f71f129677a2eda0f46f35920306a86f
