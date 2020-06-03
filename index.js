@@ -17,11 +17,11 @@ http.createServer(function (req, res) {
     fs.readFile(filename, function(err, data) {
         if (err) {
           res.writeHead(404, {'Content-Type': 'text/html'});
-          res.writeHead(200, {'X-Powered-By': 'Kiwiscript 0.0.0rc0.1'});
+          res.writeHead(200, {'X-Powered-By': 'Kiwiscript 0.0.1-R6'});
           return res.end("404 Not Found");
         } 
         res.writeHead(200, {'Content-Type': 'text/html'});
-        res.writeHead(200, {'X-Powered-By': 'Kiwiscript 0.0.0RC0.1'});
+        res.writeHead(200, {'X-Powered-By': 'Kiwiscript 0.0.1-R6'});
         res.write(parseKS(data.toString()));
         return res.end();
       });
