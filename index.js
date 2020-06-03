@@ -7,7 +7,7 @@ http.createServer(function (req, res) {
   var q = url.parse(req.url, true);
   var filename = "." + q.pathname;
   if(filename === "./"){
-    fs.readFile("home.html", function(err, data) {
+    fs.readFile("index.ks", function(err, data) {
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write(parseKS(data.toString()));
         return res.end();
