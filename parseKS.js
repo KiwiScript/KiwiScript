@@ -13,16 +13,13 @@ function parseKS(html) {
                     data = fs.readFileSync(arrayed[i+1])
                     arrayed[i] = ''
                     arrayed[i+1] = data
-                    html = arrayed.join(' ')
-                    return html
                 } catch (error) {
                     arrayed[i] = ''
                     arrayed[i+1] = error
-                    html = arrayed.join(' ')
-                    return html
                 }
             }
         }
+        html = arrayed.join(' ')
     }
 
     var timestamp = new RegExp(/<timestamp\/>()/g);
