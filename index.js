@@ -9,6 +9,7 @@ http.createServer(function (req, res) {
   if(filename === "./"){
     fs.readFile("index.ks", function(err, data) {
         res.writeHead(200, {'Content-Type': 'text/html'});
+        res.writeHead(200, {'X-Powered-By': 'Kiwiscript 0.0.1-R7'});
         res.write(parseKS(data.toString()));
         return res.end();
       });
@@ -17,11 +18,11 @@ http.createServer(function (req, res) {
     fs.readFile(filename, function(err, data) {
         if (err) {
           res.writeHead(404, {'Content-Type': 'text/html'});
-          res.writeHead(200, {'X-Powered-By': 'Kiwiscript 0.0.1-R6'});
+          res.writeHead(200, {'X-Powered-By': 'Kiwiscript 0.0.1-R7'});
           return res.end("404 Not Found");
         } 
         res.writeHead(200, {'Content-Type': 'text/html'});
-        res.writeHead(200, {'X-Powered-By': 'Kiwiscript 0.0.1-R6'});
+        res.writeHead(200, {'X-Powered-By': 'Kiwiscript 0.0.1-R7'});
         res.write(parseKS(data.toString()));
         return res.end();
       });
