@@ -1,6 +1,6 @@
 {
   "name": "kiwiscript",
-  "version": "0.0.1-R6",
+  "version": "0.0.2-R0",
   "description": "What is this? KiwiScript is a scripting language made for the web in the form of a backend language.",
   "main": "index.js",
   "scripts": {
