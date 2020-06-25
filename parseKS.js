@@ -1,7 +1,7 @@
 var fs = require('fs')
 
 function parseKS(html) {
-    let vars = {}
+    var vars = {}
 
     var include = new RegExp(/<(include)>(.+?)<\/include>/g);
     if (html.split(include)[1] !== undefined) {

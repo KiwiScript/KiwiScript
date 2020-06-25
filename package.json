@@ -4,7 +4,7 @@
   "description": "What is this? KiwiScript is a scripting language made for the web in the form of a backend language.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
