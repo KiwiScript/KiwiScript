@@ -1,6 +1,6 @@
 # KiwiScript
 
-KiwiScript is a scripting language made for the web in the form of a backend language.
+KiwiScript is a ~~scripting~~ templating language made for the web in the form of a backend language.
 
 # Documentation
 
@@ -11,6 +11,7 @@ How to install
 How to run
 
 `cd KiwiScript`
+
 `node .       `
 
 How to use Kiwiscript
