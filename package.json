@@ -1,6 +1,6 @@
 {
   "name": "kiwiscript",
-  "version": "0.0.1-R6",
+  "version": "0.0.2-R1",
   "description": "What is this? KiwiScript is a scripting language made for the web in the form of a backend language.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kiwiscripter/KiwiScript.git"
+    "url": "git+https://github.com/KiwiScript/KiwiScript.git"
   },
   "keywords": [
     "KiwiScript"
@@ -16,7 +16,10 @@
   "author": "Kiwiscripter",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kiwiscripter/KiwiScript/issues"
+    "url": "https://github.com/KiwiScript/KiwiScript/issues"
   },
-  "homepage": "https://github.com/kiwiscripter/KiwiScript#readme"
+  "homepage": "https://github.com/KiwiScript/KiwiScript#readme",
+  "dependencies": {
+    "kiwi-logger": "^1.0.6"
+  }
 }
