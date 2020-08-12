@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require('fs')
 var url = require('url'); 
+var zlib = require('zlib')
 var parseKS = require("./parseKS")
 
 http.createServer(function (req, res) {
@@ -10,25 +11,26 @@ http.createServer(function (req, res) {
   fs.readFile('./index.ks', (err, data) => {
     if(err){
       res.writeHead(404, {'content-type' : 'text/html'});
-      res.writeHead(404, {'X-Powered-By' : 'KiwiScript 0.0.2-R0'});
+      res.writeHead(404, {'X-Powered-By' : 'KiwiScript 0.0.2-R1'});
       res.write('404: not found');
-      return res.end();
+      return res.end()
     }
     res.writeHead(200, {'content-type' : 'text/html'});
-    res.writeHead(200, {'X-Powered-By' : 'KiwiScript 0.0.2-R0'});
-    res.write(parseKS(data.toString()));
+    res.writeHead(200, {'X-Powered-By' : 'KiwiScript 0.0.2-R1'});
+    res.write(parseKS(data.toString(), res, req));
     return res.end();
   })}else{
   fs.readFile(filename, (err, data) => {
     if(err){
-      res.writeHead(404, {'content-type' : 'text/html'});
-      res.writeHead(404, {'X-Powered-By' : 'KiwiScript 0.0.2-R0'});
+      res.writeHead(200, {'content-type' : 'text/html', 'X-Powered-By' : 'KiwiScript 0.0.2-R0', 'Content-Encoding' : 'gzip', 'Server' : 'Nunya'});
+
       res.write('404: not found');
+      
       return res.end();
     }
-    res.writeHead(200, {'content-type' : 'text/html'});
-    res.writeHead(200, {'X-Powered-By' : 'KiwiScript 0.0.2-R0'});
-    res.write(parseKS(data.toString()));
+    var parsedKS = zlib.gzipSync(parseKS(data.toString(), res, req))
+
+    res.write(parsedKS);
     return res.end();
   })}
-}).listen(8888);
+}).listen(80);
