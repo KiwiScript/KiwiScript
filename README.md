@@ -25,4 +25,4 @@ you can use normal html along with KiwiScript so it is pretty easy to use
 `<variable varName>var stuffs</variable>`
 What this tag does is sets the variable in this example it is named varName,
 and you can put it in a echo tag like `<echo>varName</echo>`
-and when you go to http://localhost:8888/ you will get "var stuffs" where those echo tags where
+and when you go to http://localhost:80/ you will get "var stuffs" where those echo tags where
